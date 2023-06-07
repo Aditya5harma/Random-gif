@@ -1,0 +1,300 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+.wrapper{
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 3rem 1rem 1rem;
+}
+.logo{
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+    padding: 1rem 0 3rem 3rem;
+}
+.logo img {
+    width: 2.5rem;
+    
+}
+.logo div {
+    font-size: 2rem;
+    font-weight: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+}
+.navigation{
+    display: flex;
+    margin: 0rem 5rem ;
+    gap: 2.8rem;
+}
+.navigation a{
+    text-decoration: none;
+    color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.5rem;
+    cursor: pointer;
+
+
+}
+.main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.leftmain{
+    margin: 7rem 3rem;
+    height: 15rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.h1{
+    font-size: 2.5rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+.h2{
+    font-size: 3rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+.h3{
+    font-size: 1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.button{
+    background-color: red;
+    color: white;
+    font-weight: 10px;
+    font-size: 1.2rem;
+    border-color: red;
+    height: 3rem;
+    width: 9rem;
+    box-shadow: 5px 5px 7px 0px gray;
+    position: relative;
+    z-index: 1;
+    border-radius: 5px;
+}
+.button::before{
+    content:"";
+    position: absolute;
+    background-color: #343d887c;
+    object-fit: cover;
+    border-radius: 5px;
+    top: 0;
+    right:0;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transition: 0.5s;
+    transform-origin: left;
+    z-index: -1;
+}
+.button:hover::before{
+    transform: scaleX(1);
+}
+.b1{
+    box-shadow: 2px 2px 5px 0px #39439cbe;
+
+}
+
+.rightmain{
+    display: flex;
+    margin: -3rem 5rem;
+    position: relative;
+}
+.user{
+
+    padding: 2rem;
+    z-index: -1;
+    animation: usermotion 5s infinite;
+}
+.circle{
+    position: absolute;
+    margin: 25rem 0 1rem 0;
+    animation: circlemotion 5s infinite;
+
+}
+.cube{
+    position: absolute;
+    margin: 0 0 0 20rem ;
+    animation: cubemotion 5s infinite;
+}
+.dots{
+    position: absolute;
+    margin: 24rem 19rem;
+    animation: dotmotion 5s infinite;
+}
+.plus{
+    position: absolute;
+    margin: 0 0 0 12rem;
+    animation: plusmotion 5s infinite;
+}
+.zigzag{
+    position: absolute;
+    animation: zigmotion 5s infinite;
+
+}
+@keyframes usermotion {
+    0%{
+        filter: grayscale(1);
+        scale: 1;
+    }
+    50%{
+        filter: grayscale(0);
+        scale: 1.1;
+        box-shadow: 3px 3px 10px black;
+    }
+    100%{
+        filter: grayscale(1);
+        scale: 1;
+    }
+    
+}
+@keyframes circlemotion{
+    50%{
+        transform: translateY(4rem) translateX(-4rem);
+    }
+}
+@keyframes cubemotion {
+    0%{
+        transform: rotateY(0deg) translateY(0px);
+    }
+    50%{
+        transform: rotateY(270deg) translateY(-21px);
+    }
+    100%{
+        transform: rotateY(0deg) translateY(0px);
+    }
+}   
+@keyframes dotmotion {
+    50%{
+        transform: translateY(21px);
+    }
+}
+@keyframes plusmotion {
+    50%{
+        transform: translateY(-3rem) translateX(2rem);
+    }
+    
+}
+@keyframes zigmotion {
+    50%{
+        transform: translateX(-21px);
+    }
+
+}
+.main2{
+    padding-top: 3rem;
+    background-color: rgb(227, 223, 223);
+}
+.heading{
+    color: red;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 4rem;
+    font-weight: bold;
+    text-align: center;
+}
+.container{
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 3rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    position: relative;
+
+}
+.project{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: relative;
+    width: 90%;
+    height: 550px;
+    background-size: cover;
+    box-shadow: 0 0 40px;
+    border-radius: 20px;
+}
+.project::before{
+    content: "";
+    background: linear-gradient(45deg, #343d68,#343d88be,#343d887c);
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    position: absolute;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: all 0.3s;
+    border-radius: 20px;
+
+}
+.project:hover::before{
+    transform: scaleX(1);
+
+}
+.projectleft{
+    margin-left: 120px;
+}
+.projectright{
+    margin-right: 120px;
+}
+
+#p1{
+    background-image: url(./image/Project1.png);
+}
+#p2{
+    background-image: url(./image/Project2.png);
+}
+#p3{
+    background-image: url(./image/Project3.png);
+}
+#p4{
+    background-image: url(./image/Project4.png);
+}
+.image{
+    display: flex;
+    width: 60%;
+    flex-wrap: wrap;
+    margin: 0 0 4rem 1rem;
+
+}
+.img{
+    
+    width: 40px;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width:40%;
+    color: white;
+    gap: 10px;
+    padding: 2em;
+    bottom: 20%;
+    z-index: 5;
+    gap: 1em;
+}
+.contentright{
+    margin-left: 50%;
+}
+.c1{
+    font-size: 50px;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 3rem;
+}
+.c2{
+    font-size: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+
+}
